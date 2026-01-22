@@ -1,0 +1,15 @@
+---
+- name: add ufw firewall rules
+  ufw:
+    rule: allow
+    port: 80
+    proto: tcp
+- name: Reload ufw firewall  the new rule
+  ufw:
+    state: enabled
+- name: copy index file to apache directory
+  copy:
+    src: files/index.html
+    dest: /var/www/html
+    mode: '0644'
+

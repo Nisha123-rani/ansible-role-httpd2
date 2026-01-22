@@ -1,0 +1,31 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for httpd
+- name: install apache2 package
+  apt:
+    name: apache2
+    state: present
+    update_cache: yes
+- name: start apache server
+  service:
+    name: apache2
+    state: started
+- name: add ufw firewall rules
+  ufw:
+    rule: allow
+    port: 80
+    proto: tcp   
+- name: Reload ufw firewall  the new rule
+  ufw:
+    state: enabled
+- name: copy index file to apache directory
+    copy:
+      src: /tmp/index.html
+      dest: /var/www/html
+      mode: '0644'  
+- name: Restart apache service
+    service:
+      name: apache2
+      state: restarted
+...          
+
