@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: httpd
+  role_name: ansible-role-httpd
   author: Nisha123-rani  # Must match your GitHub username
   description: Install and configure Apache HTTP server
   license: MIT
