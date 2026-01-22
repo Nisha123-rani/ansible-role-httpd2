@@ -1,6 +1,6 @@
 galaxy_info:
-  role_name: ansible-role-httpd2
-  author: Nisha123-rani  # Must match your GitHub username
+  role_name: httpd2
+  author: Nisha Rani  # Must match your GitHub username
   description: Install and configure Apache HTTP server
   license: MIT
   min_ansible_version: 2.9
