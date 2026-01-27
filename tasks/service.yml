@@ -1,6 +1,5 @@
 ---
-- name: start apache server
-  service:
+- name: Start apache server
+  ansible.builtin.service:
     name: apache2
     state: started
-

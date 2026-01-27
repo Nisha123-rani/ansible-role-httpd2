@@ -4,12 +4,11 @@
     rule: allow
     port: "80"
     proto: tcp
-- name: Enable ufw firewall  the new rule
+- name: Reload ufw firewall  the new rule
   community.general.ufw:
     state: enabled
-    policy: allow  
 - name: Copy index file to apache directory
   ansible.builtin.copy:
-    src: index.html
-    dest: /var/www/html/index.html
+    src: files/index.html
+    dest: /var/www/html
     mode: '0644'

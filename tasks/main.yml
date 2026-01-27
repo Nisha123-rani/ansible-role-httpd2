@@ -1,6 +1,10 @@
 ---
-- import_tasks: install.yml
-- import_tasks: config.yml
-- import_tasks: service.yml
-
-
+# - import_tasks: install.yml
+# - import_tasks: config.yml
+# - import_tasks: service.yml
+- name: Install Apache tasks
+  ansible.builtin.import_tasks: install.yml
+- name: Configure Apache tasks
+  ansible.builtin.import_tasks: config.yml
+- name: Start Apache tasks
+  ansible.builtin.import_tasks: service.yml
