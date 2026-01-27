@@ -1,10 +1,10 @@
 galaxy_info:
-  namespace: nisha123rani
   role_name: httpd
-  author: Nisha123-rani
+  author: Nisha Rani
   description: Install and configure Apache HTTP server
   license: MIT
   min_ansible_version: "2.9"
+
   platforms:
     - name: Ubuntu
       versions:
@@ -12,8 +12,12 @@ galaxy_info:
         - focal
         - jammy
         - noble
+
   galaxy_tags:
     - apache
     - httpd
     - webserver
     - linux
+
+dependencies: []
+
